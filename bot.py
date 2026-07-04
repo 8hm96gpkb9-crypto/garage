@@ -55,7 +55,10 @@ async def handle_web_app_data(message: Message):
     if OWNER_CHAT_ID:
         await bot.send_message(OWNER_CHAT_ID, text)
 
-    await message.answer("Заявка отправлена продавцу! Он скоро с вами свяжется 🙌")
+    await message.answer(
+    f"Вы забронировали: «{data.get('name', '—')}» за {data.get('price', '—')}.\n"
+    "Заявка отправлена продавцу, он скоро с вами свяжется 🙌"
+)
 
 
 async def main():
