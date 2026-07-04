@@ -1,16 +1,19 @@
 import asyncio
 import json
 import logging
+import os
 
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.types import Message, WebAppInfo, KeyboardButton, ReplyKeyboardMarkup
 
-# ============ НАСТРОЙКИ — ЗАПОЛНИ ЭТИ 3 СТРОЧКИ ============
-BOT_TOKEN = "8723612144:AAEMMQDQty8BTVwOqgXzlZ1SBo5W4TAd6UI"
-WEBAPP_URL = "https://8hm96gpkb9-crypto.github.io/garage/"
-OWNER_CHAT_ID = 280074884  # твой личный chat_id (число), см. README как узнать
-# =============================================================
+# ============ НАСТРОЙКИ ============
+# Токен и остальные данные теперь берутся из переменных окружения,
+# а не из кода — так они не попадут в репозиторий на GitHub.
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+WEBAPP_URL = os.environ["WEBAPP_URL"]
+OWNER_CHAT_ID = int(os.environ.get("OWNER_CHAT_ID", "0"))
+# =====================================
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(BOT_TOKEN)
@@ -56,9 +59,9 @@ async def handle_web_app_data(message: Message):
         await bot.send_message(OWNER_CHAT_ID, text)
 
     await message.answer(
-    f"Вы забронировали: «{data.get('name', '—')}» за {data.get('price', '—')}.\n"
-    "Заявка отправлена продавцу, он скоро с вами свяжется 🙌"
-)
+        f"Вы забронировали: «{data.get('name', '—')}» за {data.get('price', '—')}.\n"
+        "Заявка отправлена продавцу, он скоро с вами свяжется 🙌"
+    )
 
 
 async def main():
