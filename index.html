@@ -362,8 +362,8 @@
 <div id="app">
 
   <header class="topbar">
-    <h1 class="display">Мой гараж <span class="count mono" id="itemCount"></span></h1>
-    <p>Старые вещи в хорошие руки — нажми на вещь, чтобы посмотреть детали и забронировать</p>
+    <h1 class="display">Гаражная распродажа <span class="count mono" id="itemCount"></span></h1>
+    <p>Старые вещи в хорошие руки - нажми на вещь, чтобы посмотреть детали и забронировать</p>
   </header>
 
   <main id="grid-view" class="grid"></main>
@@ -379,7 +379,7 @@
       <p class="desc" id="detailDesc"></p>
     </div>
     <button class="reserve-btn" id="reserveBtn">Забронировать</button>
-    <p class="reserve-hint">При нажатии продавцу будет отправлено сообщение с названием товара и вашим профилем в Telegram</p>
+    <p class="reserve-hint">При нажатии на кнопку "Забронировать" - продавцу будет отправлено сообщение с названием товара и вашим профилем в Telegram</p>
   </section>
 
 </div>
@@ -406,40 +406,148 @@
    reserved  — true/false, показывает плашку "БРОНЬ" и блокирует кнопку
 ========================================================================= */
 const PRODUCTS = [
-  {
+    {
     id: 1,
-    name: "Кожаная куртка, размер M",
-    price: "3500 ₽",
-    category: "одежда",
-    photos: [],
-    description: "Настоящая кожа, носилась аккуратно 2 сезона.\nЕсть небольшая потёртость на рукаве (см. фото).\nЗамена молнии не требуется, всё исправно.",
+    name: "PowerBank Xiaomi 10.000 mAh",
+    price: "10 €",
+    category: "Техника",
+    photos: ["images/pb-xiaomi1.jpg", "images/pb-xiaomi2.jpg"],
+    description: "Компактный повербанк со встроенным кабелем type-c, инпут портом USB-A и type-c",
     reserved: false
   },
   {
     id: 2,
-    name: "Плёночный фотоаппарат Zenit",
-    price: "2000 ₽",
-    category: "техника",
-    photos: [],
-    description: "Рабочий, проверен на плёнке. В комплекте родной чехол.\nПродаю, потому что перешёл на цифру.",
+    name: "PowerBank с беспроводной зарядкой Qi",
+    price: "15 €",
+    category: "Техника",
+    photos: ["images/pb-1.jpg", "images/pb-2.jpg", "images/pb-3.jpg"],
+    description: "Повербанк с поддержкой быстрой зарядки QC и беспроводной зарядки Qi. Порты: USB-A (5V/2A), USB-A QC, Type-C (вход/выход) \nКорпус с текстурной вставкой под кожу сверху \n Емкость 20.000 mAh",
     reserved: false
   },
   {
     id: 3,
-    name: "Книжная полка, дуб",
-    price: "1800 ₽",
-    category: "мебель",
+    name: "Рюкзак Xiaomi",
+    price: "10 €",
+    category: "Сумки",
     photos: [],
-    description: "Массив дуба, немного потёртая, но крепкая.\nСамовывоз, тяжёлая — вдвоём удобнее нести.",
-    reserved: true
+    description: "Объем 21 л, есть отдельное мягкое отделение для ноутбука до 15,6'. \nУдобные внутренние карманы и водоотталкивающий материал, вес около 500г. \nУдобные лямки и качественная фурнитура",
+    reserved: false
   },
   {
     id: 4,
-    name: "Набор виниловых пластинок",
-    price: "1200 ₽",
-    category: "музыка",
+    name: "Беруши Loop Quiet 2",
+    price: "15 €",
+    category: "Прочее",
     photos: [],
-    description: "12 пластинок, рок и джаз 70-80х.\nСостояние хорошее, все проигрываются без хрипов.",
+    description: "Оригинальные, в отличном состоянии. Мягкий силикон, комфортно сидят в ушах и эффективно снижают уровень шума. \nВ комплекте кейс и сменные насадки, всего 4 размера насадок (XS-L)",
+    reserved: false
+  },
+    {
+    id: 5,
+    name: "Рюкзак Reebok",
+    price: "10 €",
+    category: "Сумки",
+    photos: [""],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 6,
+    name: "Восковые беруши",
+    price: "8 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 7,
+    name: "Сумка-бананка I'M FROM SIBERA",
+    price: "5 €",
+    category: "Сумки",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 8,
+    name: "Сумка через плечо",
+    price: "5 €",
+    category: "Сумки",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 9,
+    name: "ТВ-приставка Xiaomi",
+    price: "20 €",
+    category: "Техника",
+    photos: [],
+    description: "",
+    reserved: false
+    },
+  {
+    id: 10,
+    name: "Криптокошелёк Ledger nano S",
+    price: "20 €",
+    category: "Техника",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 11,
+    name: "Logitech Bolt USB-A Receiver",
+    price: "10 €",
+    category: "Техника",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 12,
+    name: "Вешалка на дверь IKEA",
+    price: "5 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+    {
+    id: 13,
+    name: "Лезвия Venus",
+    price: "4 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+    {
+    id: 14,
+    name: "Кухонная утварь",
+    price: "0.5 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 15,
+    name: "Водонепроницаемый мешок",
+    price: "5 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
+    reserved: false
+  },
+  {
+    id: 16,
+    name: "Водонепроницаемый чехол на телефон",
+    price: "3 €",
+    category: "Прочее",
+    photos: [],
+    description: "",
     reserved: false
   }
 ];
