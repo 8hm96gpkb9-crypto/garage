@@ -588,14 +588,17 @@ function photoNode(product, big){
 
 function renderGrid(){
   gridView.innerHTML = '';
-  itemCount.textContent = `· ${PRODUCTS.length} вещей`;
 
-  if (!PRODUCTS.length){
+  const sorted = [...PRODUCTS].sort((a, b) => a.id - b.id);
+
+  itemCount.textContent = `· ${sorted.length} вещей`;
+
+  if (!sorted.length){
     gridView.innerHTML = '<div class="empty">Пока пусто. Добавь товары в список PRODUCTS.</div>';
     return;
   }
 
-  PRODUCTS.forEach((p, idx) => {
+  sorted.forEach((p, idx) => {
     const card = document.createElement('div');
     card.className = 'card' + (p.reserved ? ' reserved' : '');
     card.onclick = () => showDetail(p);
