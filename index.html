@@ -680,7 +680,11 @@ function setMainPhoto(index){
   big.appendChild(hint);
 }
 
+let savedScrollY = 0;
+  
 function showDetail(p){
+    savedScrollY = window.scrollY;
+  
   document.getElementById('detailTagNo').textContent = '№' + String(p.id).padStart(3, '0') + (p.category ? ' · ' + p.category : '');
   document.getElementById('detailName').textContent = p.name;
   document.getElementById('detailPrice').textContent = p.price;
@@ -785,6 +789,7 @@ document.addEventListener('keydown', (e) => {
 function showGrid(){
   detailView.classList.add('hidden');
   gridView.classList.remove('hidden');
+  window.scrollTo(0, savedScrollY);
 }
 
 function showToast(msg){
