@@ -808,7 +808,7 @@ function reserve(p){
     tg.sendData(JSON.stringify(payload));
   } else {
     // Если открыто не в Telegram (например, для теста в браузере)
-    showToast('Демо-режим: в Telegram это отправит заявку продавцу');
+    showToast(`Демо-режим: заявка на «${p.name}» отправит продавцу`);
   }
 }
 
