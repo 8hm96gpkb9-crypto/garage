@@ -753,7 +753,8 @@ function renderGrid(){
 
   sorted.forEach((p, idx) => {
     const card = document.createElement('div');
-    card.className = 'card' + (p.reserved ? ' reserved' : '');
+    const statusClass = p.sold ? ' sold' : (p.reserved ? ' reserved' : '');
+    card.className = 'card' + statusClass;
     card.onclick = () => showDetail(p);
 
     const tagno = document.createElement('span');
@@ -838,7 +839,11 @@ document.getElementById('detailTagNo').textContent = '№' + String(p.id).padSta
   }
 
   const btn = document.getElementById('reserveBtn');
-  if (p.reserved){
+  if (p.sold){
+    btn.textContent = 'Продано';
+    btn.disabled = true;
+    btn.onclick = null;
+  } else if (p.reserved){
     btn.textContent = 'Уже забронировано';
     btn.disabled = true;
     btn.onclick = null;
