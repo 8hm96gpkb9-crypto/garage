@@ -630,6 +630,35 @@ const PRODUCTS = [
 const tg = window.Telegram ? window.Telegram.WebApp : null;
 if (tg) { tg.ready(); tg.expand(); }
 
+/* ===== СТАТИСТИКА =====
+   Укажи сюда публичный адрес своего бота на Railway (тот, что появится
+   после включения "Generate Domain" в Settings → Networking), например:
+   const TRACK_URL = "https://твой-бот.up.railway.app/track";
+   Если оставить пустым — сайт просто не будет отправлять статистику,
+   на работу каталога и брони это никак не влияет. */
+const TRACK_URL = "";
+
+function track(event, extra = {}){
+  if (!TRACK_URL) return;
+  const tgUser = (tg && tg.initDataUnsafe && tg.initDataUnsafe.user) || {};
+  const payload = {
+    event,
+    user_id: tgUser.id || null,
+    username: tgUser.username ? '@' + tgUser.username : (tgUser.first_name || null),
+    ...extra
+  };
+  try {
+    fetch(TRACK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload)
+    });
+  } catch (e) { /* тихо игнорируем — статистика не должна ломать каталог */ }
+}
+
+track('open_catalog');
+
 const gridView = document.getElementById('grid-view');
 const detailView = document.getElementById('detail-view');
 const itemCount = document.getElementById('itemCount');
@@ -719,7 +748,8 @@ function setMainPhoto(index){
 let savedScrollY = 0;
   
 function showDetail(p){
-    savedScrollY = window.scrollY;
+  savedScrollY = window.scrollY;
+  track('view_product', { product_id: p.id });
   
   document.getElementById('detailTagNo').textContent = '№' + String(p.id).padStart(3, '0') + (p.category ? ' · ' + p.category : '');
   document.getElementById('detailName').textContent = p.name;
