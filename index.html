@@ -120,6 +120,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
+    position: relative;
   }
   .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .photo .ph-letter {
@@ -156,6 +157,32 @@
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
 
+  .card.sold .photo {
+  opacity: 0.55;
+  filter: grayscale(1);
+}
+.card.sold .photo::after {
+  content: "ПРОДАНО";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-13deg);
+  border: 3px solid var(--ink);
+  color: var(--ink);
+  background: rgba(246, 243, 235, 0.9);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.card.sold .name { color: var(--ink-soft); }
+.card.sold .price {
+  text-decoration: line-through;
+  color: var(--ink-soft);
+  border-color: var(--line);
+}
+  
   .empty {
     grid-column: 1 / -1;
     text-align: center;
@@ -193,6 +220,24 @@
   }
   .detail .photo-big img { width: 100%; height: 100%; object-fit: cover; }
   .detail .photo-big .ph-letter { font-size: 64px; color: rgba(0,0,0,0.15); }
+
+  .detail .photo-big.sold { filter: grayscale(1); opacity: 0.6; }
+  .detail .photo-big.sold::after {
+    content: "ПРОДАНО";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-13deg);
+    border: 4px solid var(--ink);
+    color: var(--ink);
+    background: rgba(246, 243, 235, 0.9);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 8px 20px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
 
   .thumbrow {
     display: flex; gap: 8px;
@@ -236,6 +281,11 @@
     font-weight: 700;
     transform: rotate(-3deg);
     margin-bottom: 14px;
+  }
+  .stamp.sold {
+    border-color: var(--ink-soft);
+    color: var(--ink-soft);
+    text-decoration: line-through;
   }
 
   .detail .desc {
@@ -751,14 +801,17 @@ function showDetail(p){
   savedScrollY = window.scrollY;
   track('view_product', { product_id: p.id });
   
-  document.getElementById('detailTagNo').textContent = '№' + String(p.id).padStart(3, '0') + (p.category ? ' · ' + p.category : '');
+document.getElementById('detailTagNo').textContent = '№' + String(p.id).padStart(3, '0') + (p.category ? ' · ' + p.category : '');
   document.getElementById('detailName').textContent = p.name;
-  document.getElementById('detailPrice').textContent = p.price;
+  const priceEl = document.getElementById('detailPrice');
+  priceEl.textContent = p.price;
+  priceEl.classList.toggle('sold', !!p.sold);
   document.getElementById('detailDesc').textContent = p.description || '';
 
   const big = document.getElementById('detailPhotoBig');
   big.innerHTML = '';
   big.style.position = 'relative';
+  big.classList.toggle('sold', !!p.sold);
 
   activePhotos = (p.photos && p.photos.length) ? p.photos : [];
 
