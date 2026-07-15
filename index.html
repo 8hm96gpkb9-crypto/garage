@@ -457,9 +457,7 @@
    reserved  — true/false, показывает плашку "БРОНЬ" и блокирует кнопку
 ========================================================================= */
 const PRODUCTS = [
-  {
-[
-  {
+    {
     id: 1,
     name: "PowerBank Xiaomi",
     price: "10 €",
@@ -469,7 +467,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 2,
+    id: 21,
     name: "PowerBank с беспроводной зарядкой Qi",
     price: "15 €",
     category: "Техника",
@@ -493,10 +491,10 @@ const PRODUCTS = [
     category: "Прочее",
     photos: ["images/loop.jpg"],
     description: "Оригинальные, в отличном состоянии. Мягкий силикон, комфортно сидят в ушах и эффективно снижают уровень шума. \nВ комплекте кейс и сменные насадки, всего 4 размера насадок (XS-L)",
-    reserved: true
+    reserved: false
   },
-  {
-    id: 5,
+    {
+    id: 22,
     name: "Рюкзак Reebok",
     price: "10 €",
     category: "Сумки",
@@ -505,7 +503,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 6,
+    id: 13,
     name: "Восковые беруши",
     price: "8 €",
     category: "Прочее",
@@ -515,15 +513,34 @@ const PRODUCTS = [
   },
   {
     id: 7,
+    name: "Сумка-бананка I'M FROM SIBERA",
+    price: "5 €",
+    category: "Сумки",
+    photos: ["images/bananka1.jpg", "images/bananka2.jpg"],
+    description: "Небольшая сумка с надписью I'M FROM SIBERIA с двуми карманами",
+    reserved: true,
+  },
+  {
+    id: 29,
+    name: "Сумка через плечо",
+    price: "5 €",
+    category: "Сумки",
+    photos: ["images/sumka1.jpg", "images/sumka2.jpg"],
+    description: "Сумка подходит для того, чтобы положить туда паспорт деньги и ещё какюу-то мелочь. Идеально подходит при перелёте, чтобы документ был всегда под рукой.",
+    reserved: true, 
+    sold: true
+  },
+  {
+    id: 12,
     name: "ТВ-приставка Xiaomi",
     price: "20 €",
     category: "Техника",
     photos: ["images/tvX.jpg"],
     description: "Smart-TV приставка Xiaomi TV Box S 2nd Gen EU \n4K-медиаприставка на базе Google TV, превращающая любой телевизор в Smart TV",
     reserved: false
-  },
+    },
   {
-    id: 8,
+    id: 10,
     name: "Криптокошелёк Ledger nano S",
     price: "20 €",
     category: "Техника",
@@ -532,7 +549,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 9,
+    id: 11,
     name: "Logitech Bolt USB-A Receiver",
     price: "10 €",
     category: "Техника",
@@ -541,7 +558,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 10,
+    id: 9,
     name: "Вешалка на дверь IKEA",
     price: "5 €",
     category: "Прочее",
@@ -549,8 +566,18 @@ const PRODUCTS = [
     description: "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
     reserved: false
   },
-  {
-    id: 11,
+    {
+    id: 28,
+    name: "Лезвия Venus",
+    price: "4 €",
+    category: "Прочее",
+    photos: ["images/vinus.jpg"],
+    description: "3шт. НОВОЕ",
+    reserved: true,
+    sold: true
+  },
+    {
+    id: 14,
     name: "Кухонная утварь",
     price: "1 €",
     category: "Прочее",
@@ -559,7 +586,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 12,
+    id: 15,
     name: "Водонепроницаемый мешок",
     price: "5 €",
     category: "Прочее",
@@ -568,7 +595,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 13,
+    id: 16,
     name: "Водонепроницаемый чехол на телефон",
     price: "3 €",
     category: "Прочее",
@@ -577,7 +604,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 14,
+    id: 17,
     name: "Велосипедки oysho | Цвет - Слоновая кость",
     price: "10 €",
     category: "Одежда",
@@ -586,7 +613,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 15,
+    id: 18,
     name: "Велосипедки oysho | Цвет - Голубой",
     price: "10 €",
     category: "Одежда",
@@ -594,8 +621,26 @@ const PRODUCTS = [
     description: "НОВЫЕ. Не подошли по размеру",
     reserved: false
   },
+    {
+    id: 19,
+    name: "Силиконовые накладки на грудь NOBRA, 10 см",
+    price: "10 €",
+    category: "Одежда",
+    photos: ["images/selicon10.jpg", "images/selicon.jpg"],
+    description: "НОВЫЕ \nСиликоновые накладки на грудь NOBRA — это 100% альтернатива бюстгальтеру. Без клея, без белья, без компромиссов. Они фиксируются за счёт тепла тела и уникальной формы, поэтому не сползают и не выпадают весь день. Такой силиконовый бюстгальтер подходит женщинам с размером груди от 1 до 3. Ультратонкий край и плотная серединка делают их незаметными под одеждой: футболкой, платьем, бандо или топом. В комплекте — пара накладок на соски, фирменный бокс и бархатный мешочек для хранения",
+    reserved: true
+  },
+    {
+    id: 20,
+    name: "Силиконовые накладки на грудь NOBRA, 13 см",
+    price: "10 €",
+    category: "Одежда",
+    photos: ["images/selicon10.jpg", "images/selicon.jpg"],
+    description: "НОВЫЕ \nСиликоновые накладки на грудь NOBRA — это 100% альтернатива бюстгальтеру. Без клея, без белья, без компромиссов. Они фиксируются за счёт тепла тела и уникальной формы, поэтому не сползают и не выпадают весь день. Такой силиконовый бюстгальтер подходит женщинам с размером груди от 1 до 3. Ультратонкий край и плотная серединка делают их незаметными под одеждой: футболкой, платьем, бандо или топом. В комплекте — пара накладок на соски, фирменный бокс и бархатный мешочек для хранения",
+    reserved: true
+  },
   {
-    id: 16,
+    id: 2,
     name: "Смартфон Samsung galaxy S8",
     price: "70 €",
     category: "Техника",
@@ -604,7 +649,16 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 17,
+    id: 5,
+    name: "Фитнес-лента",
+    price: "1 €",
+    category: "Прочее",
+    photos: ["images/lenta.jpg"],
+    description: "15х150см. Среднего натяжения",
+    reserved: true
+  },
+  {
+    id: 24,
     name: "Профессиональный триммер для волос Moser Genio",
     price: "30 €",
     category: "Прочее",
@@ -612,8 +666,8 @@ const PRODUCTS = [
     description: "Состояние: полностью исправна, почищена и готова к работе \nПитание: Комбинированное (аккумулятор или напрямую от сети) \nКомплект: Триммер, оригинальная зарядка и двусторонняя насадка (3/6 мм)",
     reserved: false
   },
-  {
-    id: 18,
+    {
+    id: 25,
     name: "Сухой шампунь для увеличения объема волос",
     price: "4 €",
     category: "Прочее",
@@ -622,7 +676,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 19,
+    id: 26,
     name: "Новая плетеная сумка",
     price: "3 €",
     category: "Сумки",
@@ -631,7 +685,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 20,
+    id: 8,
     name: "Панама Zara",
     price: "3 €",
     category: "Одежда",
@@ -640,7 +694,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 21,
+    id: 6,
     name: "Кеды женские Superga 2750 Plus Cotu",
     price: "30 €",
     category: "Обувь",
@@ -649,7 +703,7 @@ const PRODUCTS = [
     reserved: false
   },
   {
-    id: 22,
+    id: 23,
     name: "Рюкзак Aer Day Pack",
     price: "90 €",
     category: "Сумки",
