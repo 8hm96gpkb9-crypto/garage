@@ -384,7 +384,7 @@
       "images/lampa1.jpg"
     ],
     "description": "",
-    "reserved": false,
+    "reserved": true,
     "sold": false
   },
   {
