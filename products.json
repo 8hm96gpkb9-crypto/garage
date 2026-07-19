@@ -386,5 +386,17 @@
     "description": "",
     "reserved": false,
     "sold": false
+  },
+  {
+    "id": 38,
+    "name": "Рубашка мужская летняя",
+    "price": "3 €",
+    "category": "Одежда",
+    "photos": [
+      "images/rubashka.jpg"
+    ],
+    "description": "размер L",
+    "reserved": false,
+    "sold": false
   }
 ]
