@@ -252,7 +252,7 @@
     "reserved": false,
     "sold": false
   },
-    {
+  {
     "id": 27,
     "name": "Валик с лузгой гречихи, 40×10 см",
     "price": "3 €",
@@ -264,7 +264,7 @@
     "reserved": false,
     "sold": false
   },
-    {
+  {
     "id": 28,
     "name": "Мячи",
     "price": "1 €",
@@ -275,8 +275,8 @@
     "description": "Новые",
     "reserved": false,
     "sold": false
-  }
-      {
+  },
+  {
     "id": 29,
     "name": "Имаджинариум Лайт",
     "price": "12 €",
@@ -289,7 +289,7 @@
     "reserved": false,
     "sold": false
   },
-      {
+  {
     "id": 30,
     "name": "Лежанка на пляж #1",
     "price": "1 €",
@@ -302,7 +302,7 @@
     "reserved": false,
     "sold": false
   },
-      {
+  {
     "id": 31,
     "name": "Лежанка на пляж #2",
     "price": "3 €",
@@ -315,7 +315,7 @@
     "reserved": false,
     "sold": false
   },
-      {
+  {
     "id": 32,
     "name": "Набор для настольного тениса",
     "price": "10 €",
@@ -327,7 +327,7 @@
     "reserved": false,
     "sold": false
   },
-        {
+  {
     "id": 33,
     "name": "Журнальный столик",
     "price": "7 €",
@@ -339,7 +339,7 @@
     "reserved": false,
     "sold": false
   },
-          {
+  {
     "id": 34,
     "name": "Лампа напольная",
     "price": "10 €",
@@ -351,7 +351,7 @@
     "reserved": false,
     "sold": false
   },
-          {
+  {
     "id": 35,
     "name": "Компьютерное кресло",
     "price": "40 €",
@@ -363,7 +363,7 @@
     "reserved": false,
     "sold": false
   },
-          {
+  {
     "id": 36,
     "name": "Вазы",
     "price": "2 €",
@@ -375,7 +375,7 @@
     "reserved": false,
     "sold": false
   },
-          {
+  {
     "id": 37,
     "name": "Ультразвуковой Очиститель Зубов для собак",
     "price": "10 €",
