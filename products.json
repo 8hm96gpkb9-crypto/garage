@@ -248,7 +248,7 @@
       "images/vaza1.jpg"
     ],
     "description": "Каждая ваза по 2 €",
-    "reserved": false,
+    "reserved": true,
     "sold": false
   },
   {
