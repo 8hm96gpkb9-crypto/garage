@@ -116,21 +116,21 @@
   {
     "id": 10,
     "name": "Лежанка на пляж #2",
-    "price": "3 €",
+    "price": "1 €",
     "category": "Сумки",
     "photos": [
       "images/lej11.jpg",
-      "images/lej2.jpg"
+      "images/lej22.jpg"
     ],
-    "description": "C магнитной застежкой, размер 19*16 см",
+    "description": "Размеры 86x180cm",
     "reserved": false,
     "sold": false
   },
   {
     "id": 11,
     "name": "Набор для настольного тениса",
-    "price": "10 €",
-    "category": "Сумки",
+    "price": "15 €",
+    "category": "Спортинвентарь",
     "photos": [
       "images/tenis1.jpg"
     ],
@@ -172,7 +172,7 @@
       "images/lej1.jpg",
       "images/lej2.jpg"
     ],
-    "description": "C магнитной застежкой, размер 19*16 см",
+    "description": "Размеры 86x180cm",
     "reserved": false,
     "sold": false
   },
@@ -217,7 +217,7 @@
   {
     "id": 18,
     "name": "Новая плетеная сумка",
-    "price": "3 €",
+    "price": "2 €",
     "category": "Сумки",
     "photos": [
       "images/sumkapl1.jpg",
@@ -230,7 +230,7 @@
   {
     "id": 19,
     "name": "Сухой шампунь для увеличения объема волос",
-    "price": "4 €",
+    "price": "3 €",
     "category": "Прочее",
     "photos": [
       "images/shampo.jpg"
@@ -304,7 +304,7 @@
   {
     "id": 25,
     "name": "Панама Zara",
-    "price": "3 €",
+    "price": "2 €",
     "category": "Одежда",
     "photos": [
       "images/panama1.jpg",
@@ -322,7 +322,7 @@
     "photos": [
       "images/myach.jpg"
     ],
-    "description": "Новые",
+    "description": "За все. Новые",
     "reserved": false,
     "sold": false
   },
@@ -330,7 +330,7 @@
     "id": 27,
     "name": "Имаджинариум Лайт",
     "price": "12 €",
-    "category": "Сумки",
+    "category": "Игры",
     "photos": [
       "images/ima1.jpg",
       "images/ima2.jpg"
