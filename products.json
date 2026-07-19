@@ -22,7 +22,7 @@
       "images/s82.jpg"
     ],
     "description": "Полностью рабочий телефон. Состояние отличное. Android 9",
-    "reserved": true,
+    "reserved": false,
     "sold": false
   },
   {
@@ -251,5 +251,140 @@
     "description": "C магнитной застежкой, размер 19*16 см",
     "reserved": false,
     "sold": false
+  },
+    {
+    "id": 27,
+    "name": "Валик с лузгой гречихи, 40×10 см",
+    "price": "3 €",
+    "category": "Другое",
+    "photos": [
+      "images/valik.jpg"
+    ],
+    "description": "Натуральный валик с наполнителем из лузги гречихи, можно использовать:\nпод шею во время отдыха или сна;\nпод поясницу при работе за столом;\nпод колени или голени для более комфортного положения лежа;\nдля расслабления мышц и снятия напряжения после физической нагрузки;\nво время занятий йогой, пилатесом или медитации.",
+    "reserved": false,
+    "sold": false
+  },
+    {
+    "id": 28,
+    "name": "Мячи",
+    "price": "1 €",
+    "category": "Другое",
+    "photos": [
+      "images/myach.jpg"
+    ],
+    "description": "Новые",
+    "reserved": false,
+    "sold": false
   }
+      {
+    "id": 29,
+    "name": "Имаджинариум Лайт",
+    "price": "12 €",
+    "category": "Сумки",
+    "photos": [
+      "images/ima1.jpg",
+      "images/ima2.jpg"
+    ],
+    "description": "Компактная версия популярной настольной игры на ассоциации. Отлично подходит для компании, легко брать с собой в поездки или на встречи с друзьями. Игра в хорошем состоянии, все компоненты на месте",
+    "reserved": false,
+    "sold": false
+  },
+      {
+    "id": 30,
+    "name": "Лежанка на пляж #1",
+    "price": "1 €",
+    "category": "Сумки",
+    "photos": [
+      "images/lej1.jpg",
+      "images/lej2.jpg"
+    ],
+    "description": "C магнитной застежкой, размер 19*16 см",
+    "reserved": false,
+    "sold": false
+  },
+      {
+    "id": 31,
+    "name": "Лежанка на пляж #2",
+    "price": "3 €",
+    "category": "Сумки",
+    "photos": [
+      "images/lej11.jpg",
+      "images/lej2.jpg"
+    ],
+    "description": "C магнитной застежкой, размер 19*16 см",
+    "reserved": false,
+    "sold": false
+  },
+      {
+    "id": 32,
+    "name": "Набор для настольного тениса",
+    "price": "10 €",
+    "category": "Сумки",
+    "photos": [
+      "images/tenis1.jpg"
+    ],
+    "description": "Ракетки + мячики",
+    "reserved": false,
+    "sold": false
+  },
+        {
+    "id": 33,
+    "name": "Журнальный столик",
+    "price": "7 €",
+    "category": "Мебель",
+    "photos": [
+      "images/stol1.jpg"
+    ],
+    "description": "",
+    "reserved": false,
+    "sold": false
+  },
+          {
+    "id": 34,
+    "name": "Лампа напольная",
+    "price": "10 €",
+    "category": "Мебель",
+    "photos": [
+      "images/lampa1.jpg"
+    ],
+    "description": "",
+    "reserved": false,
+    "sold": false
+  },
+          {
+    "id": 35,
+    "name": "Компьютерное кресло",
+    "price": "40 €",
+    "category": "Мебель",
+    "photos": [
+      "images/kreslo.jpg"
+    ],
+    "description": "",
+    "reserved": false,
+    "sold": false
+  },
+          {
+    "id": 36,
+    "name": "Вазы",
+    "price": "2 €",
+    "category": "Мебель",
+    "photos": [
+      "images/vaza1.jpg"
+    ],
+    "description": "Каждая ваза по 2 €",
+    "reserved": false,
+    "sold": false
+  },
+          {
+    "id": 37,
+    "name": "Ультразвуковой Очиститель Зубов для собак",
+    "price": "10 €",
+    "category": "Техника",
+    "photos": [
+      "images/uz1.jpg"
+    ],
+    "description": "",
+    "reserved": false,
+    "sold": false
+  },
 ]
