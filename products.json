@@ -1,180 +1,19 @@
 [
   {
     "id": 1,
-    "name": "PowerBank Xiaomi",
-    "price": "10 €",
-    "category": "Техника",
+    "name": "Рюкзак Aer Day Pack",
+    "price": "90 €",
+    "category": "Сумки",
     "photos": [
-      "images/pb-xiaomi1.jpg",
-      "images/pb-xiaomi2.jpg"
+      "images/aer1.jpg",
+      "images/aer2.jpg"
     ],
-    "description": "Голубой портативный аккумулятор Xiaomi GL имеет индикатор заряда, чтобы вы могли вовремя подключить устройство к сети. \nЕмкость пауэрбанка составляет 10.000 мАч. Устройство оснащено модулем быстрой зарядки. Для подключения предусмотрены 2 разъема Type-C и 1 разъем Type-A. \nИмеет потёртости на корпусе",
+    "description": "Из водоотталкивающей ткани, с отделением для ноутбука, в отличном состоянии",
     "reserved": false,
     "sold": false
   },
   {
     "id": 2,
-    "name": "Смартфон Samsung galaxy S8",
-    "price": "70 €",
-    "category": "Техника",
-    "photos": [
-      "images/s81.jpg",
-      "images/s82.jpg"
-    ],
-    "description": "Полностью рабочий телефон. Состояние отличное. Android 9",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 3,
-    "name": "Рюкзак Xiaomi",
-    "price": "10 €",
-    "category": "Сумки",
-    "photos": [
-      "images/rukzakX1.jpg",
-      "images/rukzakX2.jpg",
-      "images/rukzakX3.jpg"
-    ],
-    "description": "Объем 21 л, есть отдельное мягкое отделение для ноутбука до 15,6'. \nУдобные внутренние карманы и водоотталкивающий материал, вес около 500г. \nУдобные лямки и качественная фурнитура",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 6,
-    "name": "Кеды женские Superga 2750 Plus Cotu",
-    "price": "30 €",
-    "category": "Обувь",
-    "photos": [
-      "images/kedi1.jpg",
-      "images/kedi2.jpg"
-    ],
-    "description": "Стелька со встроенной платформой, размер EU39. \nСостояние отличное, надевались 2 раза",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 8,
-    "name": "Панама Zara",
-    "price": "3 €",
-    "category": "Одежда",
-    "photos": [
-      "images/panama1.jpg",
-      "images/panama2.jpg"
-    ],
-    "description": "Размер М, в отличном состоянии",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 9,
-    "name": "Вешалка на дверь IKEA",
-    "price": "5 €",
-    "category": "Прочее",
-    "photos": [
-      "images/ikea.jpg"
-    ],
-    "description": "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 10,
-    "name": "Криптокошелёк Ledger nano S",
-    "price": "20 €",
-    "category": "Техника",
-    "photos": [
-      "images/ledger.jpg"
-    ],
-    "description": "Классический аппаратный (холодный) криптокошелек, обеспечивающий максимальную безопасность благодаря хранению приватных ключей в изолированном чипе",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 11,
-    "name": "Logitech Bolt USB-A Receiver",
-    "price": "10 €",
-    "category": "Техника",
-    "photos": [
-      "images/bolt.jpg"
-    ],
-    "description": "Миниатюрный адаптер для беспроводного подключения мышей и клавиатур Logitech к компьютеру. Один компактный ресивер позволяет одновременно подключить до 6 совместимых устройств Logi Bolt",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 12,
-    "name": "ТВ-приставка Xiaomi",
-    "price": "20 €",
-    "category": "Техника",
-    "photos": [
-      "images/tvX.jpg"
-    ],
-    "description": "Smart-TV приставка Xiaomi TV Box S 2nd Gen EU \n4K-медиаприставка на базе Google TV, превращающая любой телевизор в Smart TV",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 13,
-    "name": "Восковые беруши",
-    "price": "8 €",
-    "category": "Прочее",
-    "photos": [
-      "images/berushi-vosk.jpg"
-    ],
-    "description": "Беруши универсальные Pillow Soft белые 6 пар Выбор врачей для защиты от воды и уменьшения уровня шума. Эргономичные силиконовые беруши, прекрасно защищающие как от громких шумов, так и от воды. Облегчают дискомфорт во время авиаперелетов, водонепроницаемые. Уровень шумоподавления 22 Дб (если использовать согласно инструкции).",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 14,
-    "name": "Кухонная утварь",
-    "price": "1 €",
-    "category": "Прочее",
-    "photos": [
-      "images/kitchen.jpg"
-    ],
-    "description": "За всё, что на фото",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 16,
-    "name": "Водонепроницаемый чехол на телефон",
-    "price": "3 €",
-    "category": "Прочее",
-    "photos": [
-      "images/coverWater.jpg"
-    ],
-    "description": "Подходит чтобы положить телефон или какие-то другим мелочи при активностях на воде. НОВЫЙ",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 17,
-    "name": "Велосипедки oysho | Цвет - Слоновая кость",
-    "price": "10 €",
-    "category": "Одежда",
-    "photos": [
-      "images/oyshoY.jpg"
-    ],
-    "description": "НОВЫЕ. Не подошли по размеру",
-    "reserved": false,
-    "sold": true
-  },
-  {
-    "id": 18,
-    "name": "Велосипедки oysho | Цвет - Голубой",
-    "price": "10 €",
-    "category": "Одежда",
-    "photos": [
-      "images/oyshoB.jpg"
-    ],
-    "description": "НОВЫЕ. Не подошли по размеру",
-    "reserved": false,
-    "sold": true
-  },
-  {
-    "id": 21,
     "name": "PowerBank с беспроводной зарядкой Qi",
     "price": "15 €",
     "category": "Техника",
@@ -188,7 +27,44 @@
     "sold": false
   },
   {
-    "id": 22,
+    "id": 3,
+    "name": "Кеды женские Superga 2750 Plus Cotu",
+    "price": "30 €",
+    "category": "Обувь",
+    "photos": [
+      "images/kedi1.jpg",
+      "images/kedi2.jpg"
+    ],
+    "description": "Стелька со встроенной платформой, размер EU39. \nСостояние отличное, надевались 2 раза",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 4,
+    "name": "Вешалка на дверь IKEA",
+    "price": "5 €",
+    "category": "Прочее",
+    "photos": [
+      "images/ikea.jpg"
+    ],
+    "description": "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 5,
+    "name": "Журнальный столик",
+    "price": "7 €",
+    "category": "Мебель",
+    "photos": [
+      "images/stol1.jpg"
+    ],
+    "description": "",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 6,
     "name": "Рюкзак Reebok",
     "price": "10 €",
     "category": "Сумки",
@@ -202,58 +78,31 @@
     "sold": false
   },
   {
-    "id": 23,
-    "name": "Рюкзак Aer Day Pack",
-    "price": "90 €",
-    "category": "Сумки",
+    "id": 7,
+    "name": "Ультразвуковой Очиститель Зубов для собак",
+    "price": "10 €",
+    "category": "Техника",
     "photos": [
-      "images/aer1.jpg",
-      "images/aer2.jpg"
+      "images/uz1.jpg"
     ],
-    "description": "Из водоотталкивающей ткани, с отделением для ноутбука, в отличном состоянии",
+    "description": "",
     "reserved": false,
     "sold": false
   },
   {
-    "id": 24,
-    "name": "Профессиональный триммер для волос Moser Genio",
-    "price": "30 €",
-    "category": "Прочее",
+    "id": 8,
+    "name": "ТВ-приставка Xiaomi",
+    "price": "20 €",
+    "category": "Техника",
     "photos": [
-      "images/trimer1.jpg",
-      "images/trimer2.jpg"
+      "images/tvX.jpg"
     ],
-    "description": "Состояние: полностью исправна, почищена и готова к работе \nПитание: Комбинированное (аккумулятор или напрямую от сети) \nКомплект: Триммер, оригинальная зарядка и двусторонняя насадка (3/6 мм)",
+    "description": "Smart-TV приставка Xiaomi TV Box S 2nd Gen EU \n4K-медиаприставка на базе Google TV, превращающая любой телевизор в Smart TV",
     "reserved": false,
     "sold": false
   },
   {
-    "id": 25,
-    "name": "Сухой шампунь для увеличения объема волос",
-    "price": "4 €",
-    "category": "Прочее",
-    "photos": [
-      "images/shampo.jpg"
-    ],
-    "description": "Без 1 применения",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 26,
-    "name": "Новая плетеная сумка",
-    "price": "3 €",
-    "category": "Сумки",
-    "photos": [
-      "images/sumkapl1.jpg",
-      "images/sumkapl2.jpg"
-    ],
-    "description": "C магнитной застежкой, размер 19*16 см",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 27,
+    "id": 9,
     "name": "Валик с лузгой гречихи, 40×10 см",
     "price": "3 €",
     "category": "Другое",
@@ -265,45 +114,7 @@
     "sold": false
   },
   {
-    "id": 28,
-    "name": "Мячи",
-    "price": "1 €",
-    "category": "Другое",
-    "photos": [
-      "images/myach.jpg"
-    ],
-    "description": "Новые",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 29,
-    "name": "Имаджинариум Лайт",
-    "price": "12 €",
-    "category": "Сумки",
-    "photos": [
-      "images/ima1.jpg",
-      "images/ima2.jpg"
-    ],
-    "description": "Компактная версия популярной настольной игры на ассоциации. Отлично подходит для компании, легко брать с собой в поездки или на встречи с друзьями. Игра в хорошем состоянии, все компоненты на месте",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 30,
-    "name": "Лежанка на пляж #1",
-    "price": "1 €",
-    "category": "Сумки",
-    "photos": [
-      "images/lej1.jpg",
-      "images/lej2.jpg"
-    ],
-    "description": "C магнитной застежкой, размер 19*16 см",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 31,
+    "id": 10,
     "name": "Лежанка на пляж #2",
     "price": "3 €",
     "category": "Сумки",
@@ -316,7 +127,7 @@
     "sold": false
   },
   {
-    "id": 32,
+    "id": 11,
     "name": "Набор для настольного тениса",
     "price": "10 €",
     "category": "Сумки",
@@ -328,31 +139,20 @@
     "sold": false
   },
   {
-    "id": 33,
-    "name": "Журнальный столик",
-    "price": "7 €",
-    "category": "Мебель",
+    "id": 12,
+    "name": "Профессиональный триммер для волос Moser Genio",
+    "price": "30 €",
+    "category": "Прочее",
     "photos": [
-      "images/stol1.jpg"
+      "images/trimer1.jpg",
+      "images/trimer2.jpg"
     ],
-    "description": "",
+    "description": "Состояние: полностью исправна, почищена и готова к работе \nПитание: Комбинированное (аккумулятор или напрямую от сети) \nКомплект: Триммер, оригинальная зарядка и двусторонняя насадка (3/6 мм)",
     "reserved": false,
     "sold": false
   },
   {
-    "id": 34,
-    "name": "Лампа напольная",
-    "price": "10 €",
-    "category": "Мебель",
-    "photos": [
-      "images/lampa1.jpg"
-    ],
-    "description": "",
-    "reserved": false,
-    "sold": false
-  },
-  {
-    "id": 35,
+    "id": 13,
     "name": "Компьютерное кресло",
     "price": "40 €",
     "category": "Мебель",
@@ -364,7 +164,83 @@
     "sold": false
   },
   {
-    "id": 36,
+    "id": 14,
+    "name": "Лежанка на пляж #1",
+    "price": "1 €",
+    "category": "Сумки",
+    "photos": [
+      "images/lej1.jpg",
+      "images/lej2.jpg"
+    ],
+    "description": "C магнитной застежкой, размер 19*16 см",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 15,
+    "name": "Криптокошелёк Ledger nano S",
+    "price": "20 €",
+    "category": "Техника",
+    "photos": [
+      "images/ledger.jpg"
+    ],
+    "description": "Классический аппаратный (холодный) криптокошелек, обеспечивающий максимальную безопасность благодаря хранению приватных ключей в изолированном чипе",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 16,
+    "name": "Logitech Bolt USB-A Receiver",
+    "price": "10 €",
+    "category": "Техника",
+    "photos": [
+      "images/bolt.jpg"
+    ],
+    "description": "Миниатюрный адаптер для беспроводного подключения мышей и клавиатур Logitech к компьютеру. Один компактный ресивер позволяет одновременно подключить до 6 совместимых устройств Logi Bolt",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 17,
+    "name": "Рюкзак Xiaomi",
+    "price": "10 €",
+    "category": "Сумки",
+    "photos": [
+      "images/rukzakX1.jpg",
+      "images/rukzakX2.jpg",
+      "images/rukzakX3.jpg"
+    ],
+    "description": "Объем 21 л, есть отдельное мягкое отделение для ноутбука до 15,6'. \nУдобные внутренние карманы и водоотталкивающий материал, вес около 500г. \nУдобные лямки и качественная фурнитура",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 18,
+    "name": "Новая плетеная сумка",
+    "price": "3 €",
+    "category": "Сумки",
+    "photos": [
+      "images/sumkapl1.jpg",
+      "images/sumkapl2.jpg"
+    ],
+    "description": "C магнитной застежкой, размер 19*16 см",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 19,
+    "name": "Сухой шампунь для увеличения объема волос",
+    "price": "4 €",
+    "category": "Прочее",
+    "photos": [
+      "images/shampo.jpg"
+    ],
+    "description": "Без 1 применения",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 20,
     "name": "Вазы",
     "price": "2 €",
     "category": "Мебель",
@@ -376,19 +252,143 @@
     "sold": false
   },
   {
-    "id": 37,
-    "name": "Ультразвуковой Очиститель Зубов для собак",
+    "id": 21,
+    "name": "Кухонная утварь",
+    "price": "1 €",
+    "category": "Прочее",
+    "photos": [
+      "images/kitchen.jpg"
+    ],
+    "description": "За всё, что на фото",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 22,
+    "name": "Велосипедки oysho | Цвет - Слоновая кость",
+    "price": "10 €",
+    "category": "Одежда",
+    "photos": [
+      "images/oyshoY.jpg"
+    ],
+    "description": "НОВЫЕ. Не подошли по размеру",
+    "reserved": false,
+    "sold": true
+  },
+  {
+    "id": 23,
+    "name": "PowerBank Xiaomi",
     "price": "10 €",
     "category": "Техника",
     "photos": [
-      "images/uz1.jpg"
+      "images/pb-xiaomi1.jpg",
+      "images/pb-xiaomi2.jpg"
+    ],
+    "description": "Голубой портативный аккумулятор Xiaomi GL имеет индикатор заряда, чтобы вы могли вовремя подключить устройство к сети. \nЕмкость пауэрбанка составляет 10.000 мАч. Устройство оснащено модулем быстрой зарядки. Для подключения предусмотрены 2 разъема Type-C и 1 разъем Type-A. \nИмеет потёртости на корпусе",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 24,
+    "name": "Смартфон Samsung galaxy S8",
+    "price": "70 €",
+    "category": "Техника",
+    "photos": [
+      "images/s81.jpg",
+      "images/s82.jpg"
+    ],
+    "description": "Полностью рабочий телефон. Состояние отличное. Android 9",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 25,
+    "name": "Панама Zara",
+    "price": "3 €",
+    "category": "Одежда",
+    "photos": [
+      "images/panama1.jpg",
+      "images/panama2.jpg"
+    ],
+    "description": "Размер М, в отличном состоянии",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 26,
+    "name": "Мячи",
+    "price": "1 €",
+    "category": "Другое",
+    "photos": [
+      "images/myach.jpg"
+    ],
+    "description": "Новые",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 27,
+    "name": "Имаджинариум Лайт",
+    "price": "12 €",
+    "category": "Сумки",
+    "photos": [
+      "images/ima1.jpg",
+      "images/ima2.jpg"
+    ],
+    "description": "Компактная версия популярной настольной игры на ассоциации. Отлично подходит для компании, легко брать с собой в поездки или на встречи с друзьями. Игра в хорошем состоянии, все компоненты на месте",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 28,
+    "name": "Велосипедки oysho | Цвет - Голубой",
+    "price": "10 €",
+    "category": "Одежда",
+    "photos": [
+      "images/oyshoB.jpg"
+    ],
+    "description": "НОВЫЕ. Не подошли по размеру",
+    "reserved": false,
+    "sold": true
+  },
+  {
+    "id": 29,
+    "name": "Восковые беруши",
+    "price": "8 €",
+    "category": "Прочее",
+    "photos": [
+      "images/berushi-vosk.jpg"
+    ],
+    "description": "Беруши универсальные Pillow Soft белые 6 пар Выбор врачей для защиты от воды и уменьшения уровня шума. Эргономичные силиконовые беруши, прекрасно защищающие как от громких шумов, так и от воды. Облегчают дискомфорт во время авиаперелетов, водонепроницаемые. Уровень шумоподавления 22 Дб (если использовать согласно инструкции).",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 30,
+    "name": "Водонепроницаемый чехол на телефон",
+    "price": "3 €",
+    "category": "Прочее",
+    "photos": [
+      "images/coverWater.jpg"
+    ],
+    "description": "Подходит чтобы положить телефон или какие-то другим мелочи при активностях на воде. НОВЫЙ",
+    "reserved": false,
+    "sold": false
+  },
+  {
+    "id": 31,
+    "name": "Лампа напольная",
+    "price": "10 €",
+    "category": "Мебель",
+    "photos": [
+      "images/lampa1.jpg"
     ],
     "description": "",
     "reserved": false,
     "sold": false
   },
   {
-    "id": 38,
+    "id": 32,
     "name": "Рубашка мужская летняя",
     "price": "3 €",
     "category": "Одежда",
@@ -400,3 +400,4 @@
     "sold": false
   }
 ]
+
