@@ -417,7 +417,7 @@
     <p>Нажми на вещь, чтобы посмотреть детали и забронировать</p>
   </header>
 
-  <main id="grid-view" class="grid"></main>
+  <main id="grid-view" class="grid"><div class="empty">Загрузка каталога…</div></main>
 
   <section id="detail-view" class="detail hidden">
     <button class="back" onclick="showGrid()">← назад к каталогу</button>
@@ -445,201 +445,35 @@
 
 <script>
 /* =========================================================================
-   ТОВАРЫ — редактируй этот список.
-   id        — любой уникальный номер
-   name      — название
-   price     — цена (строка, можно с "₽" или "договорная")
-   category  — необязательно, просто для себя
-   photos    — массив ссылок на фото. Если оставить пустым [],
-               вместо фото будет цветная плашка с первой буквой названия.
-               Фото можно положить в папку /images рядом с этим файлом
-               и указывать так: "images/1.jpg"
-   reserved  — true/false, показывает плашку "БРОНЬ" и блокирует кнопку
+   ТОВАРЫ теперь редактируются не здесь, а в отдельном файле products.json
+   (лежит рядом с этим index.html). Формат такой же, только каждое поле
+   в кавычках (это JSON, а не обычный JS):
+
+   {
+     "id": 1,
+     "name": "Название",
+     "price": "10 €",
+     "category": "Техника",
+     "photos": [],
+     "description": "Описание.\nМожно с переносами строк через \\n",
+     "reserved": false,
+     "sold": false
+   }
 ========================================================================= */
-const PRODUCTS = [
-    {
-    id: 1,
-    name: "PowerBank Xiaomi",
-    price: "10 €",
-    category: "Техника",
-    photos: ["images/pb-xiaomi1.jpg", "images/pb-xiaomi2.jpg"],
-    description: "Голубой портативный аккумулятор Xiaomi GL имеет индикатор заряда, чтобы вы могли вовремя подключить устройство к сети. \nЕмкость пауэрбанка составляет 10.000 мАч. Устройство оснащено модулем быстрой зарядки. Для подключения предусмотрены 2 разъема Type-C и 1 разъем Type-A. \nИмеет потёртости на корпусе",
-    reserved: false
-  },
-  {
-    id: 2,
-    name: "Смартфон Samsung galaxy S8",
-    price: "70 €",
-    category: "Техника",
-    photos: ["images/s81.jpg", "images/s82.jpg"],
-    description: "Полностью рабочий телефон. Состояние отличное. Android 9",
-    reserved: false
-  },
-  {
-    id: 3,
-    name: "Рюкзак Xiaomi",
-    price: "10 €",
-    category: "Сумки",
-    photos: ["images/rukzakX1.jpg", "images/rukzakX2.jpg", "images/rukzakX3.jpg"],
-    description: "Объем 21 л, есть отдельное мягкое отделение для ноутбука до 15,6'. \nУдобные внутренние карманы и водоотталкивающий материал, вес около 500г. \nУдобные лямки и качественная фурнитура",
-    reserved: false
-  },
-  {
-    id: 6,
-    name: "Кеды женские Superga 2750 Plus Cotu",
-    price: "30 €",
-    category: "Обувь",
-    photos: ["images/kedi1.jpg", "images/kedi2.jpg"],
-    description: "Стелька со встроенной платформой, размер EU39. \nСостояние отличное, надевались 2 раза",
-    reserved: false
-  },
-  {
-    id: 8,
-    name: "Панама Zara",
-    price: "3 €",
-    category: "Одежда",
-    photos: ["images/panama1.jpg", "images/panama2.jpg"],
-    description: "Размер М, в отличном состоянии",
-    reserved: false
-  },
-  {
-    id: 9,
-    name: "Вешалка на дверь IKEA",
-    price: "5 €",
-    category: "Прочее",
-    photos: ["images/ikea.jpg"],
-    description: "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
-    reserved: false
-  },
-  {
-    id: 10,
-    name: "Криптокошелёк Ledger nano S",
-    price: "20 €",
-    category: "Техника",
-    photos: ["images/ledger.jpg"],
-    description: "Классический аппаратный (холодный) криптокошелек, обеспечивающий максимальную безопасность благодаря хранению приватных ключей в изолированном чипе",
-    reserved: false
-  },
-  {
-    id: 11,
-    name: "Logitech Bolt USB-A Receiver",
-    price: "10 €",
-    category: "Техника",
-    photos: ["images/bolt.jpg"],
-    description: "Миниатюрный адаптер для беспроводного подключения мышей и клавиатур Logitech к компьютеру. Один компактный ресивер позволяет одновременно подключить до 6 совместимых устройств Logi Bolt",
-    reserved: false
-  },
-  {
-    id: 12,
-    name: "ТВ-приставка Xiaomi",
-    price: "20 €",
-    category: "Техника",
-    photos: ["images/tvX.jpg"],
-    description: "Smart-TV приставка Xiaomi TV Box S 2nd Gen EU \n4K-медиаприставка на базе Google TV, превращающая любой телевизор в Smart TV",
-    reserved: false
-  },
-  {
-    id: 13,
-    name: "Восковые беруши",
-    price: "8 €",
-    category: "Прочее",
-    photos: ["images/berushi-vosk.jpg"],
-    description: "Беруши универсальные Pillow Soft белые 6 пар Выбор врачей для защиты от воды и уменьшения уровня шума. Эргономичные силиконовые беруши, прекрасно защищающие как от громких шумов, так и от воды. Облегчают дискомфорт во время авиаперелетов, водонепроницаемые. Уровень шумоподавления 22 Дб (если использовать согласно инструкции).",
-    reserved: false
-  },
-  {
-    id: 14,
-    name: "Кухонная утварь",
-    price: "1 €",
-    category: "Прочее",
-    photos: ["images/kitchen.jpg"],
-    description: "За всё, что на фото",
-    reserved: false
-  },
-  {
-    id: 16,
-    name: "Водонепроницаемый чехол на телефон",
-    price: "3 €",
-    category: "Прочее",
-    photos: ["images/coverWater.jpg"],
-    description: "Подходит чтобы положить телефон или какие-то другим мелочи при активностях на воде. НОВЫЙ",
-    reserved: false
-  },
-  {
-    id: 17,
-    name: "Велосипедки oysho | Цвет - Слоновая кость",
-    price: "10 €",
-    category: "Одежда",
-    photos: ["images/oyshoY.jpg"],
-    description: "НОВЫЕ. Не подошли по размеру",
-    reserved: false,
-    sold: true
-  },
-  {
-    id: 18,
-    name: "Велосипедки oysho | Цвет - Голубой",
-    price: "10 €",
-    category: "Одежда",
-    photos: ["images/oyshoB.jpg"],
-    description: "НОВЫЕ. Не подошли по размеру",
-    reserved: false,
-    sold: true
-  },
-  {
-    id: 21,
-    name: "PowerBank с беспроводной зарядкой Qi",
-    price: "15 €",
-    category: "Техника",
-    photos: ["images/pb-1.jpg", "images/pb-2.jpg", "images/pb-3.jpg"],
-    description: "Повербанк с поддержкой быстрой зарядки QC и беспроводной зарядки Qi. Порты: USB-A (5V/2A), USB-A QC, Type-C (вход/выход) \nКорпус с текстурной вставкой под кожу сверху \n Емкость 20.000 мАч \nЕсть следы эксплуатации",
-    reserved: false
-  },
-  {
-    id: 22,
-    name: "Рюкзак Reebok",
-    price: "10 €",
-    category: "Сумки",
-    photos: ["images/rukzakR1.jpg", "images/rukzakR2.jpg", "images/rukzakR3.jpg"],
-    description: "Вместительный рюкзак, имеет отсек для ноутбука в большом кормане. Также есть два дополнительных небольших кармана",
-    reserved: false
-  },
-  {
-    id: 23,
-    name: "Рюкзак Aer Day Pack",
-    price: "90 €",
-    category: "Сумки",
-    photos: ["images/aer1.jpg", "images/aer2.jpg"],
-    description: "Из водоотталкивающей ткани, с отделением для ноутбука, в отличном состоянии",
-    reserved: false
-  },
-  {
-    id: 24,
-    name: "Профессиональный триммер для волос Moser Genio",
-    price: "30 €",
-    category: "Прочее",
-    photos: ["images/trimer1.jpg", "images/trimer2.jpg"],
-    description: "Состояние: полностью исправна, почищена и готова к работе \nПитание: Комбинированное (аккумулятор или напрямую от сети) \nКомплект: Триммер, оригинальная зарядка и двусторонняя насадка (3/6 мм)",
-    reserved: false
-  },
-  {
-    id: 25,
-    name: "Сухой шампунь для увеличения объема волос",
-    price: "4 €",
-    category: "Прочее",
-    photos: ["images/shampo.jpg"],
-    description: "Без 1 применения",
-    reserved: false
-  },
-  {
-    id: 26,
-    name: "Новая плетеная сумка",
-    price: "3 €",
-    category: "Сумки",
-    photos: ["images/sumkapl1.jpg", "images/sumkapl2.jpg"],
-    description: "C магнитной застежкой, размер 19*16 см",
-    reserved: false
-  },
-];
+
+let PRODUCTS = [];
+
+async function loadProducts(){
+  try {
+    // ?_=... — чтобы браузер не показывал закэшированную старую версию файла
+    const res = await fetch('products.json?_=' + Date.now());
+    PRODUCTS = await res.json();
+  } catch (e) {
+    console.error('Не удалось загрузить products.json', e);
+    PRODUCTS = [];
+  }
+  renderGrid();
+}
 
 /* ========================= РЕНДЕР ========================= */
 
@@ -712,7 +546,7 @@ function renderGrid(){
   itemCount.textContent = `· ${sorted.length} вещей`;
 
   if (!sorted.length){
-    gridView.innerHTML = '<div class="empty">Пока пусто. Добавь товары в список PRODUCTS.</div>';
+    gridView.innerHTML = '<div class="empty">Пока пусто. Добавь товары в файл products.json.</div>';
     return;
   }
 
@@ -902,7 +736,8 @@ function reserve(p){
   }
 }
 
-renderGrid();
+loadProducts();
 </script>
 </body>
 </html>
+
