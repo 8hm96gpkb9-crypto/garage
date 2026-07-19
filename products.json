@@ -48,7 +48,7 @@
       "images/ikea.jpg"
     ],
     "description": "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
-    "reserved": false,
+    "reserved": true,
     "sold": false
   },
   {
@@ -400,4 +400,3 @@
     "sold": false
   }
 ]
-
