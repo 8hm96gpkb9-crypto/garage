@@ -48,8 +48,8 @@
       "images/ikea.jpg"
     ],
     "description": "Вешалка на дверь из стали ENUDDEN. НОВАЯ",
-    "reserved": true,
-    "sold": false
+    "reserved": false,
+    "sold": true
   },
   {
     "id": 5,
@@ -248,8 +248,8 @@
       "images/vaza1.jpg"
     ],
     "description": "Каждая ваза по 2 €",
-    "reserved": true,
-    "sold": false
+    "reserved": false,
+    "sold": true
   },
   {
     "id": 21,
@@ -336,8 +336,8 @@
       "images/ima2.jpg"
     ],
     "description": "Компактная версия популярной настольной игры на ассоциации. Отлично подходит для компании, легко брать с собой в поездки или на встречи с друзьями. Игра в хорошем состоянии, все компоненты на месте",
-    "reserved": true,
-    "sold": false
+    "reserved": false,
+    "sold": true
   },
   {
     "id": 28,
@@ -384,8 +384,8 @@
       "images/lampa1.jpg"
     ],
     "description": "",
-    "reserved": true,
-    "sold": false
+    "reserved": false,
+    "sold": true
   },
   {
     "id": 32,
